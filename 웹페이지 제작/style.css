@@ -1,0 +1,476 @@
+@font-face {
+    font-family: "Bitrocore";
+    src : url(Bitrocore.ttf)
+}
+
+@font-face{
+    font-family: "Gmarket" ;
+    src : url(GmarketSansTTFMedium.ttf)        
+ }
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: column nowrap;/*헤더 밑으로 nav바 진열*/
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;  
+        
+        font-family:Gmarket,sans-serif;
+        background-color:#98D4BB;
+}
+
+
+
+.rightsmall{
+    font-size:11pt;
+    font-weight:bold;
+    font-style:italic;
+    text-align:right;
+    font-family:Gmarket,sans-serif;
+    margin-bottom: 4pt;
+    margin-right: 4pt;
+}
+header{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    letter-spacing: 3.5px;
+
+    background-color: #218B82;
+    color: rgb(56, 56, 56);
+
+    box-shadow: 10px 10px 34px -8px rgba(0,0,0,0.51);
+    position:relative;
+}
+.title>a:link{
+    color:black;
+    text-decoration: none;
+}
+.title>a:visited{
+    color:black;
+    text-decoration: none;
+}
+.title>a:hover{
+    color:black;
+    text-decoration: none;
+}
+.title{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 60px;
+    font-family: Bitrocore,sans-serif;
+}
+.image_header{
+    width:95px;
+    height:95px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+ul,li{
+    margin: 0; 
+    padding: 0;
+    list-style: none;   
+}
+#menu > li{
+    float: left;
+    position: relative;
+}
+#menu>li>a{
+
+    color: rgb(0, 0, 0);
+    font-size: 13pt;
+    text-align: center;
+    text-decoration: none;
+    font-weight:bold;
+    letter-spacing: 2px;
+    display: block;
+    padding: 14px 36px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.295);
+    
+}
+#menu>li>a:hover{
+    color:rgb(27, 182, 87);
+}
+
+#menu_sub{
+    position: absolute;
+    z-index: 4;
+    background: black;
+    opacity:0;
+    visibility: hidden;/*메뉴에 커서를 댄 상태에서만 하위 메뉴 나오게 조정*/
+    transition: all 0.15s ease-in;/*효과 전환 천천히 시작*/
+}
+#menu_sub>li{
+    padding: 16px 28px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+
+}
+#menu_sub>li>a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+#menu > li:hover #menu_sub{
+    opacity: 1;
+    visibility: visible; /*상위 menu에 커서 올릴시(hover) 자손 ul 등장*/
+
+}
+#menu_sub > li > a:hover{
+    text-decoration: underline;/*자손 요소 중 하나 선택(커서 올릴시) -> 언더라인 생성*/
+}
+/*index_본문구성*/
+article{
+    width: 100%;
+}
+.first_section{
+    line-height:30px;
+    letter-spacing:1px;
+    padding-left: 35px;
+    margin-left: 15px;
+    background-color: #c1eaec;
+    width: 75%;
+    box-shadow: 10px 10px 34px -8px rgba(0,0,0,0.51);
+}
+/*aside*/
+aside{
+    width:19%;
+    margin-left:2%;
+    height:1000px;
+    float:right;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.div1{
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 10px 10px 34px -8px rgba(0,0,0,0.51);
+    width: 80%;
+    height: 480px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.box1{
+    padding:10px;
+    position:relative;
+    height: 180px;
+}
+.row:after {
+    clear: both;
+}
+/*aside 의 클릭 효과*/
+.button_{
+    border:0px;
+    margin:0px;
+    padding:0px;
+    
+    font-size:18px;
+    font-weight:bold;
+
+}
+.button_ a{
+    width:95%;
+    height: 61px;
+    display:block;
+    line-height: 61px;
+    border:1px rgb(216, 216, 216) solid;;
+    background-color:rgb(255, 255, 255);
+    cursor: pointer;
+    color:rgb(155, 155, 155);
+    text-decoration:none;
+    padding: 2%;
+
+}
+.button_ a:hover{
+    border:1px rgb(85, 85, 85) solid;;
+    background-color:rgb(85, 85, 85);
+    color:rgb(255, 255, 255)
+}
+/*2번째 section*/
+.clear{
+    clear: both;
+}
+.button{
+    border:0px;
+    margin:0px;
+    padding:0px;
+    position:absolute;
+    display:block;
+    line-height:60px;
+
+    bottom:10px;
+    font-size:18px;
+    font-weight:bold;
+    text-align: center;
+}
+.button a{
+    border-radius: 2px;
+    
+    
+    position:absolute;
+    bottom:2%;
+    width:200px;
+    border:1px rgb(134, 134, 134) solid;;
+    background-color:rgb(255, 255, 255);
+    text-align:center;
+    cursor: pointer;
+    color:rgb(98, 98, 98);
+    text-decoration:none;
+}
+.button a:hover{
+    border:1px rgb(85, 85, 85) solid;;
+    background-color:rgb(85, 85, 85);
+    color:rgb(255, 255, 255)
+}
+footer{
+    
+    margin-right: 50px;
+}
+
+/*menu1*/
+hr{
+    z-index:1;
+}
+.menu1_title{
+    text-align: left;
+    padding-left: 0.2rem;
+    font-weight: bolder;
+    font-size: 19pt;
+    background-color: #218B82;
+    padding-top: 0.2em;
+    height: 4rem;
+    margin-left: 0.2em;
+    margin-right: 0.2em; 
+}
+.menu1_title>h1{
+    position: relative;
+    top:-0.8em;
+    line-height: 4rem;
+}
+.sec1{
+   
+    line-height: 50px;
+    position: absolute;
+    font-size: 15pt;
+    width: 98%;
+    height: 90%;
+    margin-left: 0.5em;
+    
+}
+
+.whitebox{
+    background-color: white;
+    padding-left: 10px;
+    margin-top: -20px;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px 34px -8px rgba(0,0,0,0.51);
+    margin-left: 20px;
+
+}
+.whitebox>table{
+    border-collapse: collapse;
+    text-align: center;
+    width: 90%;
+    height: 40%;
+    border: none;
+}
+.whitebox>table>thead{
+    background-color: rgba(176, 212, 235, 0.849);
+    font-weight: bold;
+    border-bottom: 2px solid rgba(86, 159, 243, 0.781);
+    
+}
+.whitebox>table>tbody>tr{
+    background-color: rgba(155, 155, 155, 0.267);
+    padding: 10px;
+}
+.icon1{
+    float: right;
+    vertical-align: center;}
+    
+.icon1>table{
+    text-align: center;
+    border:rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    width: 550px;
+    height: 20%;
+    border-collapse: collapse;
+}
+#tranicon{
+    width: 64px;
+    height: 64px;
+    
+}
+#tranicon:hover{
+    width: 70px;
+    height: 70px;
+    transition: width 0.15s, height 0.15s ease;
+}
+.icon_alarm{
+    float: right;
+    padding-right: 20px;
+    padding-bottom: 20px;    
+}
+
+
+
+/*메뉴3 이벤트*/
+.menu_title{
+    text-align: left;
+    padding-left: 0.2rem;
+    font-weight: bolder;
+    font-size: 19pt;
+    background-color: #218B82;
+    padding-top: 0.2em;
+    height: 4rem;
+    margin-left: 0.2em;
+    margin-right: 0.2em; 
+}
+
+.menu_title>h1{
+    position: relative;
+    top:-1.0em;
+    line-height: 4rem;
+}
+.front{
+    text-align: center;
+    font-size: 13pt;
+    
+}
+.front h4,span{
+    display: inline;
+    background-color: rgb(247, 247, 173);
+}
+.menu_3{
+    background-color: white;
+    width: 95%;
+    height: 98%;
+    margin-top: 2%;
+    font-size: 15pt;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    
+    margin-bottom: 5%;
+    line-height: 50px;
+    box-shadow: 10px 10px 34px -8px rgba(0,0,0,0.51);
+    align-content: center;
+}
+.menu_3>table{ 
+    width: 85%;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.eventbox{
+    font-family: 'SEBANG_Gothic_Bold', serif;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    min-width: 17.69rem;
+    min-height: 24.23rem;
+    font-size: 15pt;
+    
+    color:white;
+    text-align: left;
+    background-color: black;
+    box-sizing: border-box;
+    width:480px;
+    height:480px;
+    display: inline-block;
+    
+}
+
+.eventbox>img{
+    max-width: 100%;
+    backface-visibility: hidden;
+    vertical-align: top;
+}
+
+.eventbox>figcaption {
+   
+    position: absolute;
+    top:77%;
+    width:100%;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.904);
+    padding: 15px 20px 120px; /*위 / 양쪽/ 아래*/
+    
+}
+.eventbox>figcaption>h1{
+    opacity: 1.0;
+}
+.eventbox>figcaption>p{
+    opacity: 0.9;
+}
+.smallcap{
+    clear:both;
+    width: 100%;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+/*메뉴4 이벤트*/
+iframe{
+    width:100%;
+    height:90%;
+    float: right;
+    margin-right: 2rem;
+    
+}
+.menu_34{
+    background-color: white;
+    width: 95%;
+    height: 98%;
+    margin-top: 2%;
+    font-size: 15pt;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 5%;
+    line-height: 50px;
+    box-shadow: 10px 10px 34px -8px rgba(0,0,0,0.51);
+}
+.menu_34>table{
+    table-layout: auto;
+    height: 100%;
+    width: 98%;
+}
+
+.phone{
+    background-image: url(phone_real.png); background-size:cover; background-repeat: no-repeat;
+    width:470px;
+    height:900px;
+  
+}
+
+.phone > table{
+    text-align: center;
+   
+    background-color: rgba(255, 255, 255, 0);
+    width: 400px; /*470px의 약 80%가량의 공간에 아이콘 일렬로..*/
+    height: 20%;
+    border-collapse: collapse;
+    margin-left:35px;/*나머지 70px의 절반*/
+    }
+
+.phoneicon{
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    padding-top: 300px;
+      
+}

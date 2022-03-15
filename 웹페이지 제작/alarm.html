@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>알림 신청 페이지</title>
+    <style type="text/css">
+    body{background-image: url(alarmBack.jpg); background-size: over; background-repeat: no-repeat;}
+        div{
+            position: absolute;
+            top:50%; left:50%;
+            width: 300px;
+            height: 200px;
+            margin-left: -150px;
+            margin-top: -100px;
+            background-color: rgba(224, 220, 220, 0.637);
+
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+    function plz(){
+        var dom1 =document.getElementById("disagr");
+        var dom2 =document.getElementById("agr");
+        if(dom1.checked){
+            alert("정보수집을 동의 해주세요.");
+            return false; /*정보수집 동의 안하면 submit 안됨; 즉 form에 false값을 리턴해 반영되게 함*/
+        }  
+        else if(dom2.checked){
+            alert("알림 신청이 완료되었습니다. 접수 전날에 문자가 발송 될 예정입니다.");
+        }
+    }
+    </script>
+    <div>
+    <h3 style="text-align: center;">접수 알림 받기</h3>
+    <form method="get_phnum" action="#" onsubmit="return plz()"><!--함수앞에 return을 넣어 조건이 충족되지 않았을 시 form에다 false값을 반환하게 함*/-->
+        성명: <input type="text" name="name"><br>
+        전화번호: <input type="tel" name="call" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required><br>
+        정보 수집에 대한 동의: <br><input id="agr" type="radio" name="agree" value="yes" checked>동의함
+        <input id="disagr" type="radio" name="agree" value="no">동의 안함<br>
+        
+        <input id="sub" type="submit" value="전송">
+        <input type="reset" value="닫기" onClick="location.href='menu1.html'">
+
+    </form>
+</div>
+</body>
+</html>
